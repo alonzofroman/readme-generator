@@ -31,6 +31,8 @@ The purpose of this project is to create a professional readme generator for ope
 ## Built With
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Node.JS](https://nodejs.org/en/)
+* [Inquirer](https://www.npmjs.com/package/inquirer)
 
 
 ## Author

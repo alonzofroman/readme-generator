@@ -1,7 +1,9 @@
+// Global variables for requires
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utilities/generateMarkdown');
 
+// Question list
 const questions = [
     {
         type: 'input',
@@ -57,10 +59,7 @@ const questions = [
 ];
 
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
+// Function to ask user questions as provided and callback to generateMarkdown to create readme
 function init() {
     inquirer.prompt(questions).then((data) => {
         fs.writeFile('genREADME.md', generateMarkdown(data), function(err) {
