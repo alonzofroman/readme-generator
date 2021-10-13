@@ -63,7 +63,7 @@ const questions = [
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((data) => {
-        fs.writeFile('genREADME.md', generateMarkdown, function(err) {
+        fs.writeFile('genREADME.md', generateMarkdown(data), function(err) {
             if (err) {
                 console.log('Error')
             }

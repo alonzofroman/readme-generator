@@ -22,12 +22,12 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.projectTitle}
-  ${renderLicenseBadge(license)}
+  ${renderLicenseBadge(data.license)}
 
   ## Description
   ${data.projectDescription}
@@ -51,7 +51,7 @@ function generateMarkdown(data) {
   ${data.credits}
 
   ## License
-  ${renderLicenseLink}
+  ${renderLicenseLink(data.license)}
 
   ## Contributing
   ${data.contributing}
