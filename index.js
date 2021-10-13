@@ -1,87 +1,38 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utilities/generateMarkdown');
 
 const questions = [
     {
         type: 'input',
-        name: 'project-title',
+        name: 'projectTitle',
         message: 'What is the name of the project?'
     },
     {
         type: 'input',
-        name: 'author-name',
+        name: 'authorName',
         message: 'What is the name of the author?'
     },
     {
         type: 'input',
-        name: 'description',
+        name: 'projectDescription',
         message: 'What is the description of the project?'
     },
     {
-        type: 'input',
-        name: 'steps-taken',
-        message: 'What steps did you take in creating this project? Seperated by a comma(,)'
-    },
-    {
-        type: 'checkbox',
-        name: 'technologies-used',
-        message: 'What technologies were used in the creation of this project?',
-        choices: [
-            {
-                name: 'HTML'
-            },
-            {
-                name: 'Javascript'
-            },
-            {
-                name: 'CSS'
-            },
-            {
-                name: 'jQuery'
-            },
-            {
-                name: 'Bootstrap'
-            },
-            {
-                name: 'TailwindCSS'
-            },
-            {
-                name: 'Flickity'
-            },
-            {
-                name: 'Node.js'
-            },
-            {
-                name: 'moment.js'
-            },
-            {
-                name: 'PHP'
-            },
-            {
-                name: 'MySQL'
-            },
-            {
-                name: 'API'
-            },
-            {
-                name: 'Django'
-            },
-            {
-                name: 'Ruby'
-            },
-            {
-                name: 'Python'
-            }
-        ]
+        type: 'list',
+        name: 'license',
+        message: 'What license is being used?',
+        choices: ['None', 'MIT', 'AGPL-3.0', 'GPL-3.0', 'LGPL-3.0', 'MPL-2.0', 'Apache-2.0', 'BSL-1.0']
     }
+    
 ];
 
-inquirer.prompt(questions).then((answers) => {
-    // console.log(answers);
-    fs.writeFile('genREADME.md', `${answers} '\n'`, function(err) {
-        if (err) {
-            throw err
-        }
-        console.log('Success, check file list for generated readme')
-    })
-})
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
+
+// TODO: Create a function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
