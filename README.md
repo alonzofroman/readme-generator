@@ -14,8 +14,22 @@ The purpose of this project is to create a professional readme generator for ope
 
 
 ## Code Snippet
+- Using node.js and inquirer, I was able to take a list of questions, assigned to a variable named questions, and use the user inputs from them to call upon both FS's writeFile function and a seperate page's generateMarkdown function and create a generated readme populated with user input data.
 
-![Image](./assets/images/)
+```Javascript
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        fs.writeFile('genREADME.md', generateMarkdown(data), function(err) {
+            if (err) {
+                console.log('Error')
+            }
+            else {
+                console.log('Generated Readme. Check repository folder.')
+            }
+        })
+    })
+}
+```
 
 ## Steps
 
@@ -27,6 +41,10 @@ The purpose of this project is to create a professional readme generator for ope
 - Created questions that will provide answers for the readme
 - Created function to ask user questions to obtain those answers using terminal/Bash
 - Created functions to generate proper readme
+
+## Instructional Video
+
+* [Video](https://watch.screencastify.com/v/tLDsCYYWlbsDzENasNIR)
 
 ## Built With
 
