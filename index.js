@@ -67,7 +67,7 @@ function init() {
                 console.log('Error')
             }
             else {
-                console.log('Generating Readme')
+                console.log('Generated Readme. Check repository folder.')
             }
         })
     })
